@@ -1,0 +1,102 @@
+html, body{
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Fibon Sans', sans-serif;
+
+}
+.header{
+	padding: 50px ;
+	background-color:  #30b7f9;
+	background-image:url("../img/logo_stml_cs_2002.svg") ;
+	background-repeat: no-repeat;
+	background-position: 5%;
+	background-size: 20%, auto;
+}
+.header .button{
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+	border: thin;
+	 float: right;
+	margin-right: 20px;
+	overflow: auto;
+	/* background-color: white; */
+	 /* transition: ba  1s; */
+	 transition: background-color 0.3s;
+}
+.header .button:hover{
+	background-color: #f7f4f4;
+}
+.header .button a{
+	font-weight: 550;
+	text-decoration: none;
+	margin-bottom: 25px;
+	transition: 0.3s;
+}
+.header .button:hover a{
+	opacity: 0.6;
+}
+
+.container{
+	margin-left: 50px;
+}
+.container .navbar-nav .nav-item{
+	font-weight: bold;
+	margin-right: 20px;
+}
+.container .navbar-nav .nav-item .nav-link:hover{
+	color: #30b7f9;
+}
+.d-flex{
+	margin-right: 50px;
+}
+.d-flex input[type=search]{
+	width: 250px;
+	border-top-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+.d-flex button{
+	border-top-left-radius:0px;
+	border-bottom-left-radius:0px;
+}
+.banner{
+	width: 100%;
+	position: relative;
+}
+.banner img{
+	max-width:100%;
+	max-height:100%;
+}
+.banner .fa-circle-arrow-right{
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	font-size: 32px;
+}
+.banner .fa-circle-arrow-left{
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	font-size: 32px;
+}
+.footer{
+	padding: 10px;
+	margin-top: 20px;
+	background-color: #30b7f9;
+	display: flex;
+}
+.footer ul{
+	margin-left: 100px;
+}
+.footer ul li{
+	display: block;
+	cursor: pointer;
+	margin-bottom: 10px;
+	}
+	.footer ul li span{
+		font-weight: bold;
+		}
+	.footer ul li:hover{
+		color: white;
+	}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tết ở làng địa ngục</title>
+    <link rel="stylesheet" href="..\Bootstrap\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\Bootstrap\js\bootstrap.bundle.js">
+    <link rel="stylesheet" href="../CSS/productStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="..\Jquery\jquery-3.6.4.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Fibon Sans', sans-serif;
+        }
+        
+        .header {
+            padding: 50px;
+            background-color: hsl(27, 82%, 49%);
+            background-image: url("../img/logo_stml_cs_2002.svg");
+            background-repeat: no-repeat;
+            background-position: 5%;
+            background-size: 20%, auto;
+        }
+        
+        .banner img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .main-content {
+            background-image: linear-gradient(hsl(27, 82%, 49%);
+            ,
+            white);
+        }
+        
+        #warpper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contain {
+            display: flex;
+            width: 80%;
+        }
+        
+        .img-container {
+            flex-basis: 50%;
+            margin-right: 100px;
+            /* border: 1px solid; */
+        }
+        
+        .name {
+            margin-left: 170px;
+            margin-top: 50px;
+        }
+        
+        img {
+            width: 100%;
+            display: block;
+        }
+        
+        .img-container .main-img {
+            width: 80%;
+            margin-left: 60px;
+        }
+        
+        .small-img {
+            box-sizing: border-box;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .small-img div {
+            flex-basis: 30%;
+        }
+        
+        .detail {
+            flex-basis: 50%;
+        }
+        
+        .detail td {
+            padding: 5px;
+        }
+        
+        .price {
+            color: hsl(27, 82%, 49%);
+            ;
+            margin-bottom: 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        .product-name {
+            background-color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        .buynow {
+            text-align: center;
+            margin: 20px;
+        }
+        
+        .buynow button {
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .buynow button:hover {
+            background-color: #000;
+            color: white;
+        }
+        
+        .detail .oddrow {
+            background-color: rgb(235, 229, 229);
+        }
+        
+        .detail {
+            padding: 20px;
+        }
+        
+        .bot {
+            clear: both;
+            width: 80%;
+            margin: 0 auto;
+            height: auto;
+            border: 1px solid rgb(94, 92, 90);
+        }
+        
+        .footer {
+            padding: 10px;
+            margin-top: 20px;
+            background-color: hsl(27, 82%, 49%);
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <header class="header" style="text-align: center;">
+            <button class="button"><a href="Login.html">Đăng nhập</a></button> &nbsp;
+            <button class="button"><a href="Register.html">Đăng kí</a></button>
+        </header>
+    </div>
+    <nav class="navbar navbar-expand bg-light">
+        <div class="container">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a href="homepage.html" class="nav-link active" aria-current="page"><i class="fa fa-home" aria-hidden="true" style="font-size: 20px;"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="product.html" class="nav-link active" aria-current="page">SẢN PHẨM</a>
+                </li>
+                <li class="nav-item">
+                    <a href="introduce.html" class="nav-link active" aria-current="page">GIỚI THIỆU</a>
+                </li>
+                <li class="nav-item">
+                    <a href="phan_hoi.html" class="nav-link active" aria-current="page">PHẢN HỒI</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pay.html" class="nav-link active" aria-current="page">GIỎ HÀNG</a>
+                </li>
+            </ul>
+        </div>
+        <form class="d-flex">
+            <input class="form-control shadow-none" type="search" placeholder="Bạn muốn tìm gì">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </nav>
+    <div class="banner">
+        <img src="../image/banner1.webp" alt="banner">
+    </div>
+    <h2 class="name">
+        Tết ở làng địa ngục
+    </h2>
+    <div id="warpper">
+        <div class="contain">
+            <div class="img-container">
+                <img src="../image/tetolangdianguc.jpg" alt="">
+                <div class="buynow">
+                    <button class="buy" onclick="alert('Sản phẩm đã được thêm vào giỏ hàng')"><i class="fa-solid fa-cart-shopping"></i> &nbsp; Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-name">Tết ở làng địa ngục</div>
+                <div class="price">55.300<sup>đ</sup></div>
+                <button href="pay.html" class="checkout">Thanh toán</button>
+            </div>
+            <div class="detail">
+                <table>
+                    <h4 style="text-align: center;">Giới thiệu</h4>
+
+                    <TR class="oddrow">
+                        <td>Nhà cung cấp:</td>
+                        <td>Đinh Tị</td>
+                    </TR>
+                    <TR>
+                        <td>Nhà xuất bản:</td>
+                        <td>NXB Thanh Niên</td>
+                    </TR>
+                    <TR class="oddrow">
+                        <td>Tác giả:</td>
+                        <td>Thảo Trang</td>
+                    </TR>
+                    <TR>
+                        <td>Hình thức:</td>
+                        <td>Bìa mềm</td>
+                    </TR>
+                    <TR class="oddrow">
+                        <td>Thời gian giao hàng: </td>
+                        <td>Chậm nhất 7 ngày</td>
+                    </TR>
+                    <TR>
+                        <td>Chính sách đổi trả:</td>
+                        <td>Trong vòng 30 ngày</td>
+                    </TR>
+                    <TR class="oddrow">
+                        <td>Số lượng còn lại:</td>
+                        <td>100 quyển</td>
+                    </TR>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div>
+        <footer class="footer">
+            <ul>
+                <li>THÔNG TIN LIÊN LẠC</li>
+                <li>KD online: <span>0909 811 373- 0902 820 616</span></li>
+                <li>KD Showroom: <span>0901 344 494</span></li>
+                <li>KD Khách tỉnh: <span>0898 477 688</span></li>
+                <li>Hỗ trợ KH: <span>(028) 3878 668-(028) 3890 2828</span></li>
+            </ul>
+            <ul>
+                <li>Bảng báo giá NEW</li>
+                <li>Chính sách bảo hành</li>
+                <li>Chính sách vận chuyển</li>
+                <li>Hướng dẫn mua sách</li>
+                <li>Chính sách đổi - trả hàng</li>
+
+            </ul>
+            <ul>
+                <li>Tích điểm Quà tặng VIP</li>
+                <li>DV đóng gói sách</li>
+                <li>Lịch sử mua hàng</li>
+                <li>Chính sách khuyến mại</li>
+            </ul>
+        </footer>
+    </div>
+    <script src="../CSS/script.js"></script>
+</body>
+
+</html>

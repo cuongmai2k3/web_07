@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="..\Bootstrap\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\Bootstrap\js\bootstrap.bundle.js">
+    <link rel="stylesheet" href="..\CSS\main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="div">
+        <header class="header" style="text-align: center;">
+            <button class="button"><a href="Login.html">Đăng nhập</a></button> &nbsp;
+            <button class="button"><a href="Register.html">Đăng kí</a></button>
+        </header>
+    </div>
+    <nav class="navbar navbar-expand bg-light">
+        <div class="container">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a href="homepage.html" class="nav-link active" aria-current="page"><i class="fa fa-home" aria-hidden="true" style="font-size: 20px;"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="product.html" class="nav-link active" aria-current="page">SẢN PHẨM</a>
+                </li>
+                <li class="nav-item">
+                    <a href="introduce.html" class="nav-link active" aria-current="page">GIỚI THIỆU</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link active" aria-current="page">PHẢN HỒI</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pay.html" class="nav-link active" aria-current="page">GIỎ HÀNG</a>
+                </li>
+            </ul>
+        </div>
+        <form class="d-flex">
+            <input class="form-control shadow-none" type="search" placeholder="Bạn muốn tìm gì">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </nav>
+    </div>
+    <div class="banner" id="slide">
+        <img src="../image/banner1.webp" alt="banner" id="image">
+        <i class="fa fa-circle-arrow-right" onclick="next()"></i>
+        <i class="fa fa-circle-arrow-left" onclick="prev()"></i>
+        <script lang="javascript">
+            var arr_img = [
+                "../image/banner1.webp",
+                "../image/banner2.webp",
+                "../image/banner3.webp",
+                "../image/banner4.webp"
+            ]
+            var index = 0;
+
+            function next() {
+                index++;
+                if (index >= arr_img.length) {
+                    index = 0;
+                }
+                document.getElementById("image").src = arr_img[index];
+            }
+
+            function prev() {
+                index--;
+                if (index < 0) {
+                    index = arr_img.length - 1;
+                }
+                document.getElementById("image").src = arr_img[index];
+            }
+        </script>
+    </div>
+    <div class="main-content">
+
+        <div class="warper">
+            <article>
+                <h3 class="h3">TẤT CẢ SẢN PHẨM</h3>
+            </article>
+            <div class="fbanner">
+                <div class="Pbanner">
+                    <img src="../image/header.jpg" alt="">
+                </div>
+
+            </div>
+            <div>
+                <ul class="product-list">
+                    <li class="product-item">
+                        <ul class="product-info">
+                            <li>
+                                <div class="brand-mark">
+                                    <img src="../image/vanhoc.png" alt="img">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="Product_1.html"><img src="../image/caycamngotcuatoi.jpg" alt=""></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product-name"><a href="Product_1.html">Cây cam ngọt của tôi</a></div>
+                            </li>
+                            <li>
+                                <div class="price">75.600<sup>đ</sup></div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="product-item">
+                        <ul class="product-info">
+                            <li>
+                                <div class="brand-mark">
+                                    <img src="../image/vanhoc.png" alt="img">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="Product_2.html"><img src="../image/nhagiakim.jpg" alt=""></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product-name"><a href="Product_2.html">Nhà giả kim</a></div>
+                            </li>
+                            <li>
+                                <div class="price">55.300<sup>đ</sup></div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="product-item">
+                        <ul class="product-info">
+                            <li>
+                                <div class="brand-mark">
+                                    <img src="../image/vanhoc.png" alt="img">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="Product_3.html"><img src="../image/tetolangdianguc.jpg" alt=""></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product-name"><a href="Product_3.html">Tết ở làng địa ngục</a></div>
+                            </li>
+                            <li>
+                                <div class="price">113.230<sup>đ</sup></div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="product-item">
+                        <ul class="product-info">
+                            <li>
+                                <div class="brand-mark">
+                                    <img src="../image/vanhoc.png" alt="img">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="Product_4.html"><img src="../image/thuong.jpg" alt=""></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product-name"><a href="Product_4.html">Thương</a></div>
+                            </li>
+                            <li>
+                                <div class="price">51.000<sup>đ</sup></div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="product-item">
+                        <ul class="product-info">
+                            <li>
+                                <div class="brand-mark">
+                                    <img src="../image/vanhoc.png" alt="img">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="Product_5.html"><img src="../image/999lathu.jpg" alt=""></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product-name"><a href="Product_5.html">999 lá thư gửi cho chính mình</a></div>
+                            </li>
+                            <li>
+                                <div class="price">69.300<sup>đ</sup></div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="product-item">
+                        <ul class="product-info">
+                            <li>
+                                <div class="brand-mark">
+                                    <img src="../image/vanhoc.png" alt="img">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="Product_6.html"><img src="../image/ghichepphapy.jpg" alt=""></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product-name"><a href="Product_6.html">Combo sách ghi chép pháp y</a></div>
+                            </li>
+                            <li>
+                                <div class="price">250.088<sup>đ</sup></div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="product-item">
+                        <ul class="product-info">
+                            <li>
+                                <div class="brand-mark">
+                                    <img src="../image/booktech.png" alt="img">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="Product_7.html"><img src="../image/whywesleep.jpg" alt=""></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product-name"><a href="Product_7.html">Sao chúng ta lại ngủ?</a></div>
+                            </li>
+                            <li>
+                                <div class="price">224.100<sup>đ</sup></div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="product-item">
+                        <ul class="product-info">
+                            <li>
+                                <div class="brand-mark">
+                                    <img src="../image/mangabook.png" alt="img">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thumbnail">
+                                    <a href="Product_8.html"><img src="../image/dragonballkid.jpg" alt=""></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product-name"><a href="Product_8.html">7 viên ngọc rồng nhí(tập 2)</a></div>
+                            </li>
+                            <li>
+                                <div class="price">64.500<sup>đ</sup></div>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <footer class="footer">
+            <div>
+                <footer class="footer">
+
+                    <ul>
+                        <li>THÔNG TIN LIÊN LẠC</li>
+                        <li>KD online: <span>0909 811 373- 0902 820 616</span></li>
+                        <li>KD Showroom: <span>0901 344 494</span></li>
+                        <li>KD Khách tỉnh: <span>0898 477 688</span></li>
+                        <li>Hỗ trợ KH: <span>(028) 3878 668-(028) 3890 2828</span></li>
+                    </ul>
+                    <ul>
+                        <li>Bảng báo giá máy lạnh NEW</li>
+                        <li>Chính sách bảo hành</li>
+                        <li>Chính sách vận chuyển</li>
+                        <li>Hướng dẫn mua hàng máy lạnh</li>
+                        <li>Chính sách đổi - trả hàng</li>
+                        <li>Chính sách bảo mật</li>
+                    </ul>
+                    <ul>
+                        <li>Tích điểm Quà tặng VIP</li>
+                        <li>DV vệ sinh máy lạnh</li>
+                        <li>Lịch sử mua hàng</li>
+                        <li>Tìm hiểu về mua trả góp</li>
+                    </ul>
+                </footer>
+        </footer>
+        </div>
+</body>
+
+</html>

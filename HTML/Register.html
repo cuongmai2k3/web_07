@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="../CSS/Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="logo">
+        <a href="homepage.html"> <img src="../image/fahasa-logo.png" alt="Logo"></a>
+    </div>
+    <div class="login-box">
+        <h2>Register</h2>
+        <form action="" method="post" id="form-register">
+            <div class="user-box">
+                <input type="text" name="" required="" id="phone">
+                <label>Nhập số diện thoại</label>
+                <div class="error"></div>
+            </div>
+            <div class="user-box">
+                <input type="text" name="" required="" id="username">
+                <label>Nhập tên người dùng</label>
+                <div class="error"></div>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required="" id="password">
+                <label>Nhập mật khẩu</label>
+                <div class="error"></div>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required="" id="password_2">
+                <label>Nhập lại mật khẩu</label>
+                <div class="error"></div>
+            </div>
+            <button type="submit">
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Xác nhận
+        </a>
+      </button>
+            <button>
+    <a href="./Login.html">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Đăng nhập
+    </a>
+   </button>
+            <script>
+                const form = document.getElementById('form-register');
+                const username = document.getElementById('username');
+                const phone = document.getElementById('phone');
+                const password = document.getElementById('password');
+                const password2 = document.getElementById('password_2');
+                var check = 0;
+                form.addEventListener('click', (e) => {
+                    if (check > 0) {
+                        e.preventDefault();
+                    }
+                    validateInputs();
+                });
+                const setError = (element, message) => {
+                    const inputControl = element.parentElement;
+                    const errorDisplay = inputControl.querySelector('.error');
+
+                    errorDisplay.innerText = message;
+                    inputControl.classList.add('error');
+                    inputControl.classList.remove('success')
+                }
+
+                const setSuccess = element => {
+                    const inputControl = element.parentElement;
+                    const errorDisplay = inputControl.querySelector('.error');
+
+                    errorDisplay.innerText = '';
+                    inputControl.classList.add('success');
+                    inputControl.classList.remove('error');
+                };
+                const isInValidphone = phone => {
+                    const reg = /[^0-9]/g;
+                    return reg.test(String(phone));
+                }
+
+                const validateInputs = () => {
+                    const usernameValue = username.value.trim();
+                    const phoneValue = phone.value.trim();
+                    const passwordValue = password.value.trim();
+                    const password2Value = password2.value.trim();
+
+                    if (usernameValue === '') {
+                        setError(username, 'Vui lòng nhập tên người dùng');
+                        check++;
+                    } else {
+                        setSuccess(username);
+                        check = 0;
+                    }
+                    if (isInValidphone(phoneValue)) {
+                        setError(phone, 'Số điện thoại không hợp lệ');
+                        check++;
+                    } else if (phoneValue === '') {
+                        setError(phone, 'Vui lòng nhập số điện thoại');
+                        check++;
+                    } else {
+                        setSuccess(phone);
+                        check = 0;
+                    }
+                    if (passwordValue === '') {
+                        setError(password, 'Vui lòng nhập mật khẩu');
+                        check++;
+                    } else if (passwordValue.length < 8) {
+                        setError(password, 'Mật khẩu phải có ít nhất 8 kí tự');
+                        check++;
+
+                    } else {
+                        setSuccess(password);
+                        check = 0;
+                    }
+
+                    if (password2Value === '') {
+                        setError(password2, 'Vui lòng nhập lại mật khẩu');
+                        check++;
+                    } else if (password2Value !== passwordValue) {
+                        setError(password2, "mật khẩu không chính xác");
+                        check++;
+                    } else {
+                        setSuccess(password2);
+                        check = 0;
+                    }
+                };
+            </script>
+        </form>
+    </div>
+</body>
+
+</html>

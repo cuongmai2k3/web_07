@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="../CSS/Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="logo">
+        <a href="homepage.html"><img src="../image/fahasa-logo.png" alt="Logo"></a>
+    </div>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form action="" method="" id="form-login">
+            <div class="user-box">
+                <input type="text" name="" required="" id="username">
+                <label>username</label>
+                <div class="error"></div>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required="" id="password">
+                <label>Password</label>
+                <div class="error"></div>
+            </div>
+
+            <button type="submit" value="submit" style="margin-bottom: 15px;" id="btn">
+    <a href="homepage.html">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      đăng nhập
+    </a>
+    <button>
+   </button>
+            <br>
+            <button>
+    <a href="./Register.html" >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      TẠO TÀI KHOẢN MỚI
+    </a> </button>
+        </form>
+        <script>
+            const form = document.getElementById("form-login");
+            const username = document.getElementById("username");
+            const password = document.getElementById("password");
+            const btn = document.getElementById("btn");
+            var check = 0;
+            btn.addEventListener('click', e => {
+                validateInputs();
+                if (check > 0) {
+                    e.preventDefault();
+                }
+            });
+            const setError = (element, message) => {
+                const inputControl = element.parentElement;
+                const errorDisplay = inputControl.querySelector('.error');
+
+                errorDisplay.innerText = message;
+                inputControl.classList.add('error');
+                inputControl.classList.remove('success')
+            }
+            const setSuccess = element => {
+                const inputControl = element.parentElement;
+                const errorDisplay = inputControl.querySelector('.error');
+
+                errorDisplay.innerText = '';
+                inputControl.classList.add('success');
+                inputControl.classList.remove('error');
+            };
+            const validateInputs = () => {
+                const usernameValue = username.value.trim();
+                const passwordValue = password.value.trim();
+                if (usernameValue === '') {
+                    setError(username, 'Vui lòng nhập tên người dùng');
+                    check++;
+                } else {
+                    setSuccess(username);
+                    check = 0;
+                }
+                if (passwordValue === '') {
+                    setError(password, 'Vui lòng nhập mật khẩu');
+                    check++;
+                } else {
+                    setSuccess(password);
+                    check = 0;
+                }
+            };
+        </script>
+    </div>
+</body>
+
+</html>
