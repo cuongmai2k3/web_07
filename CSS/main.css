@@ -53,6 +53,40 @@ body {
     color: #30b7f9;
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+}
+
+.logo ul {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+}
+
+.logo ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    flex: 1;
+}
+
+.logo ul li img {
+    width: 40px;
+    height: 35px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
 .d-flex {
     margin-right: 50px;
 }
@@ -228,30 +262,6 @@ h3 {
 .fbanner .small-banner .innerBanner {
     width: 100%;
     height: 90px;
-}
-
-.logo {
-    background-color: white;
-    padding: 20;
-}
-
-.logo ul {
-    width: 80%;
-    padding-left: 20px;
-    margin: 0 auto;
-}
-
-.logo ul li {
-    display: inline-block;
-    width: 8%;
-    text-align: center;
-}
-
-.logo ul li img {
-    width: 40px;
-    height: 35px;
-    margin: 28px;
-    cursor: pointer;
 }
 
 .footer {
